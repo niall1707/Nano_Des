@@ -303,6 +303,7 @@ footer {
 
 /* Carousel */
 .carousel-inner img {
+    margin-top: 180px;
     height: 300px; /* Set fixed height for better layout */
     object-fit: cover;
 }
