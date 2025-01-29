@@ -136,3 +136,8 @@
     width: 12px;
     height: 12px;
 }
+.col-md-6 {
+    margin-top: 35px;
+    justify-content: center;
+    align-items: center;
+}
