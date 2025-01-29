@@ -303,11 +303,42 @@ footer {
 
 /* Carousel */
 .carousel-inner img {
-    height: 500px; /* Set fixed height for better layout */
+    height: 300px; /* Set fixed height for better layout */
     object-fit: cover;
 }
 
 /* carousel-indicators */
 .carousel-indicators {
     color: black;
+}
+
+/* Ensure the carousel container has a consistent height */
+#heroCarousel {
+    width: 100%;
+    height: 55vh; /* Set relative height */
+    min-height: 350px; /* Minimum height */
+    max-height: 500px; /* Prevents excessive scaling */
+    overflow: hidden;
+}
+
+/* Force all images to fit the carousel dimensions */
+.carousel-inner .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images scale properly without distortion */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    #heroCarousel {
+        height: 45vh; /* Reduce height slightly for smaller screens */
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    #heroCarousel {
+        height: 40vh; /* Further reduce for mobile */
+        min-height: 250px;
+    }
 }
