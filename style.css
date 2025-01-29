@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --primary-green: #85B64A;
     --dark-grey: #2d2d2d;
     --medium-grey: #5a5a5a;
@@ -238,4 +238,76 @@ footer {
     nav {
         padding: 0.5rem 1rem;
     }
+} */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #5a5a5a;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #eaeef0;
+    border-radius: 5px;
+}
+
+/* Center Logo and Text */
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo {
+    width: 80px;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #5a5a5a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #85B64A;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 100px; /* Adjust to ensure content is visible below the fixed navbar */
+}
+
+/* Carousel */
+.carousel-inner img {
+    height: 500px; /* Set fixed height for better layout */
+    object-fit: cover;
+}
+
+/* carousel-indicators */
+.carousel-indicators {
+    color: black;
 }
