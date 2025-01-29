@@ -343,3 +343,13 @@ footer {
         min-height: 250px;
     }
 }
+
+.carousel-control-next-icon {
+    filter: invert(1); /* Makes the white arrows black */
+    width: 90%;
+}
+
+.carousel-control-prev-icon {
+    filter: invert(1); /* Makes the white arrows black */
+    width: 90%;
+}
