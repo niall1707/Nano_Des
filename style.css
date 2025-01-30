@@ -153,13 +153,13 @@
 .carousel-caption {
     position: absolute;
     top: 140px; /* Adjust as needed */
-    left: 30px; /* Adjust as needed */
+    left: max(25%,80px); /* Adjust as needed */
     background: rgb(220, 219, 219);
     color: black;
     padding: 5px 10px; /* Reduces the size */
     border-radius: 8px; /* Slightly smaller rounding */
     text-align: left;
-    max-width: 40%; /* Decreases overall width */
+    max-width: min(27%, 250px); /* Decreases overall width */
     font-size: 14px; /* Makes text smaller */
     max-height: 150px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
@@ -175,7 +175,7 @@
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-top: 10px solid white; /* Matches background */
+    border-top: 10px solid rgb(170, 159, 159); /* Matches background */
 }
 
 /* Ensure text is fully visible */
