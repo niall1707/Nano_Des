@@ -143,6 +143,22 @@
             padding: 20px;
             margin-top: 40px;
         }
+        /* Add this to your existing CSS */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-md-4 {
+    display: flex;
+}
+
+.service-box {
+    flex: 1; /* This ensures the boxes stretch to fill the height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This spaces out the content evenly */
+}
     </style>
 </head>
 <body>
