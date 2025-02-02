@@ -231,3 +231,66 @@
             font-size: 18px;
             color: #333;
         }
+
+        /* Carousel Container */
+#heroCarousel {
+    width: 100%;
+    height: auto; /* Allow height to adjust based on content */
+    min-height: 300px; /* Minimum height to prevent collapsing */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Carousel Images */
+.carousel-inner img {
+    width: 100%;
+    height: auto; /* Allow height to adjust based on width */
+    object-fit: contain; /* Ensures the entire image is visible */
+}
+
+/* Text Below Carousel */
+.text-below-carousel {
+    text-align: center;
+    background: #f8f9fa;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 60%; /* Consistent width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-below-carousel h5 {
+    color: #176de5;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-below-carousel p {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #heroCarousel {
+        min-height: 250px; /* Adjust height for smaller screens */
+    }
+
+    .text-below-carousel {
+        max-width: 80%; /* Wider text box on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #heroCarousel {
+        min-height: 200px; /* Further adjust height for mobile */
+    }
+
+    .text-below-carousel {
+        max-width: 90%; /* Full width on very small screens */
+    }
+}
