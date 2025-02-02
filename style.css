@@ -8,20 +8,20 @@
 /* Navigation Bar */
 .navbar .container {
     display: flex;
-    justify-content: center; /* Centers navbar content */
-    align-items: center; /* Align items vertically */
+    justify-content: center;
+    align-items: center;
 }
 
 /* Centered Navigation Links */
 .nav-links {
-    list-style: none; /* Removes default bullet points */
-    padding: 0; /* Removes any default padding */
-    margin: 0; /* Ensures no extra space is added */
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Aligns vertically */
-    flex-grow: 1; /* Ensures it takes up available space */
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .nav-links a {
@@ -43,7 +43,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-grow: 0; /* Prevents the logo from expanding */
+    flex-grow: 0;
 }
 
 .logo {
@@ -67,124 +67,103 @@
 
 /* Hero Section */
 .hero {
-    margin-top: 100px; /* Adjust to ensure content is visible below the fixed navbar */
+    margin-top: 100px;
 }
 
-/* Carousel */
+/* Carousel Container */
+#heroCarousel {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Carousel Images */
 .carousel-inner img {
-    margin-top: 100px;
-    width: 100%; /* Ensures full width */
-    height: auto; /* Ensures full image is visible */
-    max-height: 500px; /* Prevents excessive stretching */
-    object-fit: contain; /* Ensures the whole image is visible */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 /* Carousel Indicators */
-.carousel-indicators {
-    color: black;
-}
-
-/* Ensure the carousel container has a consistent height */
-#heroCarousel {
-    width: 100%;
-    height: auto; /* Adjusts height dynamically */
-    min-height: 350px; /* Minimum height */
-    overflow: hidden;
-}
-
-/* Force all images to fit the carousel dimensions */
-.carousel-inner .carousel-item img {
-    width: 100%;
-    height: auto;
-    object-fit: contain; /* Ensures the whole image is shown */
-}
-
-/* Adjust for smaller screens */
-@media (max-width: 768px) {
-    #heroCarousel {
-        min-height: 300px;
-    }
-}
-
-@media (max-width: 480px) {
-    #heroCarousel {
-        min-height: 250px;
-    }
-}
-
-/* Change the color of carousel arrows to black */
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-    filter: invert(1); /* Makes arrows black */
-    width: 90%;
-}
-
-/* Change the color of inactive carousel indicators to black */
 .carousel-indicators button {
-    background-color: #85B64A !important; /* Sets the dots to black */
-    opacity: 1; /* Set the opacity to 50% */
-}
-
-/* Make the active indicator fully black */
-.carousel-indicators .active {
-    background-color: black !important;
-    opacity: 1; /* Full opacity for the active dot */
-}
-
-/* Optional: Resize the dots for better visibility */
-.carousel-indicators button {
+    background-color: #85B64A !important;
+    opacity: 1;
     width: 12px;
     height: 12px;
 }
 
-.col-md-6 {
-    margin-top: 35px;
-    justify-content: center;
-    align-items: center;
+.carousel-indicators .active {
+    background-color: black !important;
 }
 
-/* Carousel Caption Styling */
-.carousel-caption h5,
-.carousel-caption p {
-    color: #176de5; /* Bootstrap's success color (green) */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds shadow for better readability */
+/* Carousel Arrows */
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    filter: invert(1);
+    width: 90%;
 }
 
-/* Position carousel text in the top left with a speech bubble */
+/* Carousel Caption */
 .carousel-caption {
     position: absolute;
-    top: 100px; /* Adjust as needed */
-    left: max(25%,80px); /* Adjust as needed */
+    top: 100px;
+    left: max(25%, 80px);
     background: rgb(220, 219, 219);
     color: black;
-    padding: 5px 10px; /* Reduces the size */
-    border-radius: 8px; /* Slightly smaller rounding */
+    padding: 5px 10px;
+    border-radius: 8px;
     text-align: left;
-    max-width: min(27%, 250px); /* Decreases overall width */
-    font-size: 14px; /* Makes text smaller */
+    max-width: min(27%, 250px);
+    font-size: 14px;
     max-height: 150px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Speech bubble tail */
 .carousel-caption::after {
     content: "";
     position: absolute;
-    bottom: -10px; /* Adjust based on position */
+    bottom: -10px;
     left: 15px;
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-top: 10px solid rgb(170, 159, 159); /* Matches background */
+    border-top: 10px solid rgb(170, 159, 159);
 }
 
-/* Ensure text is fully visible */
 .carousel-caption h5,
 .carousel-caption p {
     color: #c00505 !important;
-    text-shadow: none; /* Remove shadow for better clarity */
+    text-shadow: none;
     font-weight: bold;
+}
+
+/* Text Below Carousel */
+.text-below-carousel {
+    text-align: center;
+    background: #f8f9fa;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-below-carousel h5 {
+    color: #176de5;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-below-carousel p {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
 }
 
 /* Flexbox for Overview Section */
@@ -204,93 +183,23 @@
     justify-content: space-between;
 }
 
-* Center the text below carousel */
-        .text-below-carousel {
-            text-align: center;
-            background: #f8f9fa;
-            padding: 15px;
-            margin-top: 10px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-            max-width: 60%;
-            margin-left: auto;
-            margin-right: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .text-below-carousel h5 {
-            color: #176de5;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .text-below-carousel p {
-            font-size: 18px;
-            color: #333;
-        }
-
-        /* Carousel Container */
-#heroCarousel {
-    width: 100%;
-    height: auto; /* Allow height to adjust based on content */
-    min-height: 300px; /* Minimum height to prevent collapsing */
-    overflow: hidden;
-    position: relative;
-}
-
-/* Carousel Images */
-.carousel-inner img {
-    width: 100%;
-    height: auto; /* Allow height to adjust based on width */
-    object-fit: contain; /* Ensures the entire image is visible */
-}
-
-/* Text Below Carousel */
-.text-below-carousel {
-    text-align: center;
-    background: #f8f9fa;
-    padding: 15px;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 60%; /* Consistent width */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.text-below-carousel h5 {
-    color: #176de5;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.text-below-carousel p {
-    font-size: 18px;
-    color: #333;
-    margin: 0;
-}
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     #heroCarousel {
-        min-height: 250px; /* Adjust height for smaller screens */
+        min-height: 250px;
     }
 
     .text-below-carousel {
-        max-width: 80%; /* Wider text box on smaller screens */
+        max-width: 80%;
     }
 }
 
 @media (max-width: 480px) {
     #heroCarousel {
-        min-height: 200px; /* Further adjust height for mobile */
+        min-height: 200px;
     }
 
     .text-below-carousel {
-        max-width: 90%; /* Full width on very small screens */
+        max-width: 90%;
     }
 }
