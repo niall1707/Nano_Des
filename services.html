@@ -143,22 +143,41 @@
             padding: 20px;
             margin-top: 40px;
         }
+
         /* Add this to your existing CSS */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-.col-md-4 {
-    display: flex;
-}
+        .col-md-4 {
+            display: flex;
+        }
 
-.service-box {
-    flex: 1; /* This ensures the boxes stretch to fill the height */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* This spaces out the content evenly */
-}
+        .service-box {
+            flex: 1; /* This ensures the boxes stretch to fill the height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* This spaces out the content evenly */
+        }
+
+        /* New CSS for price changes */
+        .old-price {
+            text-decoration: line-through;
+            color: #dc3545; /* Red color for old price */
+            font-size: 1.2rem;
+        }
+
+        .new-price {
+            color: #28a745; /* Green color for new price */
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .price-note {
+            color: #6c757d; /* Gray color for note */
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -188,7 +207,10 @@
                     <div class="badge">Custom Quote</div>
                     <i class="fas fa-globe fa-3x text-success mb-3"></i>
                     <h3>Full Website</h3>
-                    <div class="price-tag">Price on Request</div>
+                    <div class="price-tag">
+                        <span class="old-price">€700</span>
+                        <span class="new-price">€500</span>
+                    </div>
                     <ul class="text-muted">
                         <li>Complete web solution</li>
                         <li>E-commerce functionality</li>
@@ -204,7 +226,10 @@
                     <div class="badge">Most Popular</div>
                     <i class="fas fa-file-alt fa-3x text-success mb-3"></i>
                     <h3>Landing Page</h3>
-                    <div class="price-tag">€500</div>
+                    <div class="price-tag">
+                        <span class="old-price">€550</span>
+                        <span class="new-price">€399</span>
+                    </div>
                     <ul class="text-muted">
                         <li>Single page design</li>
                         <li>Mobile-responsive</li>
@@ -234,24 +259,22 @@
                 </div>
             </div>
         </div>
-                    <!-- publication Box -->
-                    <div class="col-md-4">
-                        <div class="service-box text-center p-4 position-relative" onclick="window.location.href='contact.html'">
-                            <div class="badge">Support</div>
-                            <i class="fas fa-upload fa-3x text-success mb-3"></i>
-                            <h3>Website publication</h3>
-                            <div class="price-tag">
-                                <div class="price-tag">€50</div>
-                                <span style="font-size: 1rem">includes free custom domain</span>
-                            </div>
-                            <ul class="text-muted">
-
-                            </ul>
-                        </div>
-                    </div>
+        <!-- Publication Box -->
+        <div class="col-md-4">
+            <div class="service-box text-center p-4 position-relative" onclick="window.location.href='contact.html'">
+                <div class="badge">Support</div>
+                <i class="fas fa-upload fa-3x text-success mb-3"></i>
+                <h3>Website Domains</h3>
+                <div class="price-tag">
+                    <div class="price-tag">€10</div>
+                    <span style="font-size: 1rem">custom domain specific to your business </span>
                 </div>
+                <ul class="text-muted">
+                    <!-- Add details if needed -->
+                </ul>
+            </div>
+        </div>
     </section>
-
 
     <footer class="bg-dark text-white text-center py-3 mt-5">
         <p>&copy; 2024 Nano Designs. All rights reserved.</p>
